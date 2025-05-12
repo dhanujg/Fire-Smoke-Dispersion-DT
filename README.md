@@ -1,4 +1,11 @@
 # Austin Fire & Smoke Dispersion & Digital‑Twin APIs 🚒🌫️
+##### Author(s): Dhanuj M. Gandikota, Ryan Lewis
+
+## Description
+The project is developed and maintained by the TexUS Extreme Weather & Urban Climate Modeling Lab, Jackson School of Geosciences, The University of Texas at Austin. 
+
+This application ingests daily fire‑incident reports from the Austin Fire Department, simulates near‑real‑time smoke‑plume dispersion with the VSmoke model, and serves the results—together with meteorology and emissions metadata—through public‑facing APIs that drop directly into ArcGIS Online or ArcGIS Pro
+
 
 > End‑to‑end toolkit for **ingesting Austin Fire Department RSS feeds,
 > simulating 2‑D VSmoke plumes**, and exposing the results via
