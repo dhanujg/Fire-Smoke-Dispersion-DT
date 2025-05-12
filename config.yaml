@@ -1,0 +1,38 @@
+# ─── General ───────────────────────────────────────────────────────────────
+#project_root: !!path "{project_root}"
+project_root: "C:/Users/dhanu_w8sodpo/Documents/Code/TexUS/FireSmokeDigitalTwin/Fire-Smoke-Dispersion-DT"
+#data_dir:     !!path "${project_root}/data"
+data_dir: "C:/Users/dhanu_w8sodpo/Documents/Code/TexUS/FireSmokeDigitalTwin/Fire-Smoke_Dispersion-DT/data"
+
+# ─── Ingest settings ───────────────────────────────────────────────────────
+ingest:
+  rss_url: "https://services.austintexas.gov/fact/fact_rss.cfm"
+  polling_minutes: 3
+  target_city: "Austin"
+  output_subdir: "ingested_fire_incident_maps"     # under data_dir
+
+# ─── Dispersion model ──────────────────────────────────────────────────────
+vsmoke:
+  #exe: "${project_root}/backend/vsmoke_bin/VSMKARC.EXE"
+  exe: "C:/Users/dhanu_w8sodpo/Documents/Code/TexUS/FireSmokeDigitalTwin/Fire-Smoke-Dispersion-DT/backend/vsmoke_bin/VSMKARC.EXE"
+  #wine: "wine"                    # path to Wine binary on Linux/macOS
+  wine: ""                        # path to Wine binary on Windows
+  mix_height_ft: 2000
+  acres_default: 1
+  plume_rise_fraction: -0.50
+  stability_class: 1             # Pasquill class: 1(A) .. 7(G)
+  output_subdir: "plumes"        # KML/KMZ
+  meta_subdir:   "dispersion_sim_data"   # JSON/CSV with met & fire params
+
+# ─── API settings ──────────────────────────────────────────────────────────
+api:
+  host: "0.0.0.0"
+  port: 8080
+arcgis:
+  host: "0.0.0.0"
+  port: 8081
+
+# ─── GeoJSON export ───────────────────────────────────────────────────────
+geojson:
+  output_subdir: "geojson"   # under data_dir
+  save_to_disk: true         # false → build on‑the‑fly only
