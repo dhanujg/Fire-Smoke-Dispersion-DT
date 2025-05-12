@@ -1,4 +1,4 @@
-# Austin Fire & Smoke Dispersion & Digital‑Twin APIs 🚒🌫️
+# Austin Fire & Smoke Dispersion & Digital‑Twin APIs 
 ##### Author(s): Dhanuj M. Gandikota, Ryan Lewis
 
 ## Description
@@ -19,20 +19,20 @@ This application ingests daily fire‑incident reports from the Austin Fire Depa
 ## 1  Repository layout
 
 
-Fire\_Smoke\_Dispersion\_DT/
+Fire-Smoke-Dispersion-DT/
 ├─ backend/                    ← src package (importable as `firesmoke`)
 │  ├─ ingest/                  ← data acquisition
 │  ├─ simulators/              ← VSmoke driver + legacy converter
 │  ├─ api/                     ← FastAPI apps (data + ArcGIS)
 │  ├─ utils/                   ← config & path helpers
-│  └─ vsmoke\_bin/              ← VSMKARC.EXE + tables (Windows binary)
+│  └─ vsmoke_bin/              ← VSMKARC.EXE + tables (Windows binary)
 ├─ data/                       ← auto‑created; all outputs land here
-│  ├─ ingested\_fire\_incident\_maps/
-│  ├─ plumes/                  ← \*.kml
-│  ├─ dispersion\_sim\_data/     ← per‑incident JSON bundles
-│  └─ geojson/                 ← FireSmokeMap\_YYYY‑MM‑DD.geojson
+│  ├─ ingested_fire_incident_maps/
+│  ├─ plumes/                  ← *.kml
+│  ├─ dispersion_sim_data/     ← per‑incident JSON bundles
+│  └─ geojson/                 ← FireSmokeMap_YYYY‑MM‑DD.geojson
 ├─ tests/
-│  └─ local\_smoke\_test.py      ← quick pipeline smoke‑test
+│  └─ local_smoke_test.py      ← quick pipeline smoke‑test
 ├─ config.yaml                 ← all paths + model / API parameters
 ├─ requirements.txt
 └─ README.md                   ← (you are here)
